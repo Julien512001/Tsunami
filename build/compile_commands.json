@@ -1,0 +1,102 @@
+[
+{
+  "directory": "/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/build",
+  "command": "/usr/bin/cc -Dgraphic -I\"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/include\" -g -o CMakeFiles/myFem.dir/src/glu.c.o -c \"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/src/glu.c\"",
+  "file": "/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/src/glu.c"
+},
+{
+  "directory": "/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/build",
+  "command": "/usr/bin/cc -Dgraphic -I\"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/include\" -g -o CMakeFiles/myFem.dir/src/tsunami.c.o -c \"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/src/tsunami.c\"",
+  "file": "/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/src/tsunami.c"
+},
+{
+  "directory": "/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/build",
+  "command": "/usr/bin/cc -Dgraphic -I\"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/include\" -g -o CMakeFiles/myFem.dir/src/homework.c.o -c \"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/src/homework.c\"",
+  "file": "/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/src/homework.c"
+},
+{
+  "directory": "/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/build",
+  "command": "/usr/bin/cc -Dgraphic -I\"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/include\" -g -o CMakeFiles/myFem.dir/src/main.c.o -c \"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/src/main.c\"",
+  "file": "/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/src/main.c"
+},
+{
+  "directory": "/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/build/glfw/src",
+  "command": "/usr/bin/cc -D_GLFW_USE_CONFIG_H -I\"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/include\" -I\"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/src\" -I\"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/build/glfw/src\" -g -fPIC -Wall -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/context.c.o -c \"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/src/context.c\"",
+  "file": "/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/src/context.c"
+},
+{
+  "directory": "/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/build/glfw/src",
+  "command": "/usr/bin/cc -D_GLFW_USE_CONFIG_H -I\"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/include\" -I\"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/src\" -I\"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/build/glfw/src\" -g -fPIC -Wall -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/init.c.o -c \"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/src/init.c\"",
+  "file": "/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/src/init.c"
+},
+{
+  "directory": "/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/build/glfw/src",
+  "command": "/usr/bin/cc -D_GLFW_USE_CONFIG_H -I\"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/include\" -I\"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/src\" -I\"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/build/glfw/src\" -g -fPIC -Wall -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/input.c.o -c \"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/src/input.c\"",
+  "file": "/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/src/input.c"
+},
+{
+  "directory": "/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/build/glfw/src",
+  "command": "/usr/bin/cc -D_GLFW_USE_CONFIG_H -I\"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/include\" -I\"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/src\" -I\"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/build/glfw/src\" -g -fPIC -Wall -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/monitor.c.o -c \"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/src/monitor.c\"",
+  "file": "/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/src/monitor.c"
+},
+{
+  "directory": "/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/build/glfw/src",
+  "command": "/usr/bin/cc -D_GLFW_USE_CONFIG_H -I\"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/include\" -I\"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/src\" -I\"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/build/glfw/src\" -g -fPIC -Wall -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/vulkan.c.o -c \"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/src/vulkan.c\"",
+  "file": "/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/src/vulkan.c"
+},
+{
+  "directory": "/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/build/glfw/src",
+  "command": "/usr/bin/cc -D_GLFW_USE_CONFIG_H -I\"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/include\" -I\"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/src\" -I\"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/build/glfw/src\" -g -fPIC -Wall -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/window.c.o -c \"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/src/window.c\"",
+  "file": "/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/src/window.c"
+},
+{
+  "directory": "/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/build/glfw/src",
+  "command": "/usr/bin/cc -D_GLFW_USE_CONFIG_H -I\"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/include\" -I\"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/src\" -I\"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/build/glfw/src\" -g -fPIC -Wall -o CMakeFiles/glfw.dir/x11_init.c.o -c \"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/src/x11_init.c\"",
+  "file": "/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/src/x11_init.c"
+},
+{
+  "directory": "/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/build/glfw/src",
+  "command": "/usr/bin/cc -D_GLFW_USE_CONFIG_H -I\"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/include\" -I\"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/src\" -I\"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/build/glfw/src\" -g -fPIC -Wall -o CMakeFiles/glfw.dir/x11_monitor.c.o -c \"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/src/x11_monitor.c\"",
+  "file": "/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/src/x11_monitor.c"
+},
+{
+  "directory": "/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/build/glfw/src",
+  "command": "/usr/bin/cc -D_GLFW_USE_CONFIG_H -I\"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/include\" -I\"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/src\" -I\"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/build/glfw/src\" -g -fPIC -Wall -o CMakeFiles/glfw.dir/x11_window.c.o -c \"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/src/x11_window.c\"",
+  "file": "/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/src/x11_window.c"
+},
+{
+  "directory": "/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/build/glfw/src",
+  "command": "/usr/bin/cc -D_GLFW_USE_CONFIG_H -I\"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/include\" -I\"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/src\" -I\"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/build/glfw/src\" -g -fPIC -Wall -o CMakeFiles/glfw.dir/xkb_unicode.c.o -c \"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/src/xkb_unicode.c\"",
+  "file": "/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/src/xkb_unicode.c"
+},
+{
+  "directory": "/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/build/glfw/src",
+  "command": "/usr/bin/cc -D_GLFW_USE_CONFIG_H -I\"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/include\" -I\"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/src\" -I\"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/build/glfw/src\" -g -fPIC -Wall -o CMakeFiles/glfw.dir/posix_time.c.o -c \"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/src/posix_time.c\"",
+  "file": "/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/src/posix_time.c"
+},
+{
+  "directory": "/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/build/glfw/src",
+  "command": "/usr/bin/cc -D_GLFW_USE_CONFIG_H -I\"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/include\" -I\"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/src\" -I\"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/build/glfw/src\" -g -fPIC -Wall -o CMakeFiles/glfw.dir/posix_thread.c.o -c \"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/src/posix_thread.c\"",
+  "file": "/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/src/posix_thread.c"
+},
+{
+  "directory": "/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/build/glfw/src",
+  "command": "/usr/bin/cc -D_GLFW_USE_CONFIG_H -I\"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/include\" -I\"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/src\" -I\"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/build/glfw/src\" -g -fPIC -Wall -o CMakeFiles/glfw.dir/glx_context.c.o -c \"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/src/glx_context.c\"",
+  "file": "/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/src/glx_context.c"
+},
+{
+  "directory": "/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/build/glfw/src",
+  "command": "/usr/bin/cc -D_GLFW_USE_CONFIG_H -I\"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/include\" -I\"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/src\" -I\"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/build/glfw/src\" -g -fPIC -Wall -o CMakeFiles/glfw.dir/egl_context.c.o -c \"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/src/egl_context.c\"",
+  "file": "/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/src/egl_context.c"
+},
+{
+  "directory": "/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/build/glfw/src",
+  "command": "/usr/bin/cc -D_GLFW_USE_CONFIG_H -I\"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/include\" -I\"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/src\" -I\"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/build/glfw/src\" -g -fPIC -Wall -o CMakeFiles/glfw.dir/osmesa_context.c.o -c \"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/src/osmesa_context.c\"",
+  "file": "/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/src/osmesa_context.c"
+},
+{
+  "directory": "/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/build/glfw/src",
+  "command": "/usr/bin/cc -D_GLFW_USE_CONFIG_H -I\"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/include\" -I\"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/src\" -I\"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/build/glfw/src\" -g -fPIC -Wall -o CMakeFiles/glfw.dir/linux_joystick.c.o -c \"/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/src/linux_joystick.c\"",
+  "file": "/home/julien/Documents/LEPL1110 Devoirs C/Projet/Tsunami/glfw/src/linux_joystick.c"
+}
+]
