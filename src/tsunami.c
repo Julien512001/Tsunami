@@ -107,7 +107,7 @@ void tsunamiAnimate(double dt, int nmax, int sub,  const char *meshFileName, con
     GLfloat mat_shininess[] = { 50.0 };
     GLfloat light_position[] = { 8.0, 8.0, 8.0, 0.0 };
     
-	  glMaterialfv(GL_FRONT, GL_SPECULAR, mat_specular);
+	glMaterialfv(GL_FRONT, GL_SPECULAR, mat_specular);
     glMaterialfv(GL_FRONT, GL_SHININESS, mat_shininess);
     glLightModeli(GL_LIGHT_MODEL_TWO_SIDE, GL_TRUE);
     glLightfv(GL_LIGHT0, GL_POSITION, light_position);
@@ -164,7 +164,7 @@ void tsunamiAnimate(double dt, int nmax, int sub,  const char *meshFileName, con
             
             GLUquadricObj *quadratic = gluNewQuadric();         
             gluQuadricNormals(quadratic, GLU_SMOOTH); 
-            glColor3f(1.0,1.0,1.0);
+            glColor3f(0.0,1.0,0.0);     //Rouge, Vert, Bleu
             gluSphere(quadratic,5.95,400,200);
             
             // A commenter pour supprimer la sphere interieure
@@ -218,4 +218,46 @@ void tsunamiAnimate(double dt, int nmax, int sub,  const char *meshFileName, con
     
     glfwTerminate();
     exit( EXIT_SUCCESS );
+}
+
+void draw() {
+        if (!glfwInit()) {
+            fprintf(stderr, "Failed to initialize GLFW\n");
+            return -1;
+        }
+
+        // Créer une fenêtre GLFW
+        GLFWwindow* window = glfwCreateWindow(640, 480, "Triangle Vert", NULL, NULL);
+        if (!window) {
+            glfwTerminate();
+            return -1;
+        }
+
+        // Faire de la fenêtre le contexte courant
+        glfwMakeContextCurrent(window);
+
+        // Boucle principale de rendu
+        while (!glfwWindowShouldClose(window)) {
+            // Effacer l'écran
+            glClear(GL_COLOR_BUFFER_BIT);
+
+            // Dessiner le triangle
+            glBegin(GL_QUADS);              // Commencer à dessiner un triangle
+            glColor3f(0.0, 1.0, 0.0);           // Couleur verte pour tous les sommets
+            glVertex2f(0.0f, 0.0f);           // Premier sommet
+            glVertex2f(0.0f, 0.5f);            // Deuxième sommet
+            glVertex2f(0.5f, 0.5f);             // Troisième sommet
+            glVertex2f(0.5f, 0.0f);
+            glEnd();
+            // Échanger les buffers avant et arrière
+            glfwSwapBuffers(window);
+
+            // Vérifier les événements (par exemple, appuyer sur une touche ou fermer la fenêtre)
+            glfwPollEvents();
+        }
+
+        // Détruire la fenêtre et terminer GLFW
+        glfwDestroyWindow(window);
+        glfwTerminate();
+
 }

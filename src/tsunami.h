@@ -30,7 +30,7 @@ void    tsunamiAnimate(double dt, int nmax, int sub, const char *meshFileName, c
 double  tsunamiInitialConditionOkada(double x, double y);
 void    tsunamiWriteFile(const char *baseResultName, int iter, double *U, double *V, double *E, int nelem, int nsub);
 void    tsunamiReadFile(const char *baseResultName, int iter, double *U, double *V, double *E, int nelem);
-
+void    draw();
 
 
 
