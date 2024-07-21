@@ -15,9 +15,9 @@ int main(void)
         tsunamiCompute(10.0,1000,10,meshName,resultBaseName);
         tsunamiAnimate(10.0,1000,10,meshName,resultBaseName);    
         */
-        //tsunamiCompute(10.0,1000,10,meshName,resultBaseName);
-        //tsunamiAnimate(10.0,1000,10,meshName,resultBaseName);    
-        draw();
+        //tsunamiCompute(10.0,7000,50,meshName,resultBaseName);
+        tsunamiAnimate(10.0,7000,50,meshName,resultBaseName);    
+        //draw();
 
        
 
