@@ -179,7 +179,7 @@ void tsunamiAnimate(double dt, int nmax, int sub,  const char *meshFileName, con
             // Commenter la ligne qui suit pour visualiser la bathym�trie :-)
             // Puisque ligne qui pr�c�de contient la bathym�trie..
                              
-                    value = E[3*i+j]*10;
+                    //value = E[3*i+j]*10;
                     if (value < 0) value = 0;
                     if (value > 1) value = 1; 
                     colors[j*3+0] = 3.5*(value)*(value);

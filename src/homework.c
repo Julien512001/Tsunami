@@ -8,18 +8,14 @@ typedef struct {
     int node[2];
 } femEdge;
 
-//static const double phi2[nTri][nTri] = {{1.0/3.0, 1.0/3.0, 1.0/3.0}, {0.0, 2.0/3.0, 1.0/3.0}, {1.0/3.0, 1.0/3.0, 1.0/3.0}};
-//static const double phi1[nEdg][nEdg] = {{(1.0-0.577350269189626)/2, (1.0+0.577350269189626)/2},{(1.0+0.577350269189626)/2, (1.0-0.577350269189626)/2}};
-//static const double phi1[nEdg][nEdg] = {{-0.36602540378, 1.36602540378},{1.36602540378, -0.36602540378}};
 static double phi2[nTri][nTri] = {{0.0, 0.0, 0.0}, {0.0, 0.0, 0.0}, {0.0, 0.0, 0.0}};
 static double phi1[nEdg][nEdg] = {{0.0, 0.0},{0.0, 0.0}};
-
 
 static const double invA[3][3] = {{18.0,-6.0,-6.0},{-6.0,18.0,-6.0},{-6.0,-6.0,18.0}};
 
 double interpolate(const double *phi, double *U, int *map, int n)
 {
-    double u = 0.0; int i;
+git    double u = 0.0; int i;
     for (i=0; i <n; i++)
         u += phi[i]*U[map[i]];
     return u;
@@ -243,7 +239,6 @@ void femCompute(int size, int* Elem, double dt, double* bath,double* E, double* 
 
     //compute vecteur b       
     femTsumnamiIntegralsElements(X, Y, E, U, FE, FU, FV, V, bath, Elem, nElem);
-    //printf("after");
     femTsumnamiIntegralsEdges(X, Y, E, U, V, FE, FU, FV, bath, nElem, Elem, nEdge, edges);
     //resoudre system
     femTsunamiMultiplyInverseMatrix(FE, FU, FV, X, Y, Elem, nElem);  
@@ -285,26 +280,20 @@ void legendreUpdateRungeKutta(int size, double* E, double* U, double* V,double d
     free(K);
 }
 
+/*! \brief Compute the CFD simulation of the Tsunami
+ * 
+ * \param[in] dt    time step
+ * \param[in] nmax  maximal iteration number
+ * \param[in] sub   iteration step between 2 backup
+ * \param[out] void
+ */
+
 void tsunamiCompute(double dt, int nmax, int sub, const char *meshFileName, const char *baseResultName)
 { 
-
-//
-// A modifer :-)
-// Ici, on se contente d'initialiser le champs d'élévation avec la bathymétrie
-// pour avoir un joli plot de départ !
-//
-// On divise la bathymétrie par un facteur (10*BathMax) pour que l'échelle de couleur fonctionne
-// bien dans la fonction d'animation fournie....
-//
-    
-    //read donner du file
-    /********************************************/
     int i,j,nNode,nElem,trash,nEdge,nBound;
-    //double dtrash;
-    
     double BathMax = 9368;
     
-    //init baymetry et X et Y
+    // Init : batimetry, X and Y by reading "meshFileName"
     FILE* file = fopen(meshFileName,"r");
     fscanf(file, "Number of nodes %d \n",&nNode);   
     double *bath = malloc(sizeof(double)*nNode);
@@ -313,70 +302,50 @@ void tsunamiCompute(double dt, int nmax, int sub, const char *meshFileName, cons
     for (i = 0; i < nNode; i++){
         fscanf(file,"%d : %le %le %le\n",&trash,&X[i],&Y[i],&bath[i]);
         bath[i] = (bath[i] > BathMax) ? BathMax : bath[i];
-        //printf("%d\n", i);
-        }
+    }
     
-    //init les elements
+    // Init : Nodes of each triangle
     fscanf(file, "Number of triangles %d \n",&nElem); 
     int *elem = malloc(sizeof(int)*(3*nElem+1));
     for (i = 0; i < nElem; i++){
         fscanf(file,"%d : %d %d %d \n",&trash,&elem[i*3],&elem[i*3+1],&elem[i*3+2]);
-        //printf("%d\n", i);
-        }
+    }
     
-    //init les edges 
+    // Init : Edges of each triangle
     fscanf(file, "Number of edges %d \n",&nEdge);
     femEdge *edges = (femEdge*) malloc(sizeof(femEdge)*nEdge);
-    //printf("%d, %ld, %ld\n", nEdge, sizeof(edges), sizeof(femEdge));
     nBound = 0;
-    //printf("%d\n", nEdge);
     for (i = 0; i < nEdge; i++){
         fscanf(file,"%d : %d %d : %d %d \n",&trash,&(edges[i].node[0]),&(edges[i].node[1]),&(edges[i].elem[0]), &(edges[i].elem[1]) );
         if (edges[i].elem[1] == -1) nBound++;
-        //printf("%d\n", i);
-        }
-
+    }
     fclose(file);
-    //printf("%d\n", nBound);
-    //printf("%d, %d, %d, %d\n", edges[0].node[0], (edges[0].node[1]),(edges[0].elem[0]), (edges[0].elem[1]) );
-    //printf("%d, %d, %d, %d\n", edges[nEdge-1].node[0], (edges[nEdge-1].node[1]),(edges[nEdge-1].elem[0]), (edges[nEdge-1].elem[1]) );
-    /******************************************/
+
     int size = nElem*3;
     double *E  = calloc(size+1,sizeof(double));
     double *U  = calloc(size+1,sizeof(double));
     double *V  = calloc(size+1,sizeof(double));
     
-    //inital conditions
-    for (i = 0; i < nElem*nTri; i++)
-    {
-
+    // Init : Initial condition
+    for (i = 0; i < nElem*nTri; i++){
         E[i] = tsunamiInitialConditionOkada(X[elem[i]],Y[elem[i]]);
         U[i] = 0;
         V[i] = 0;
     }
-    
-    /*********************************************/
 
-
-    /********************************************/
-    for (i = 0; i < nTri; i++)
-    {
+    for (i = 0; i < nTri; i++){
         phi2f(gaussTriangleXsi[i], gaussTriangleEta[i], phi2[i]);
     }
     
-    for (i = 0; i < nEdg; i++)
-    {
+    for (i = 0; i < nEdg; i++){
         phi1f(gaussEdgeXsi[i],phi1[i]);
     }
     
-
-    /*******************************************/
-
     double *FE  = calloc(size+1,sizeof(double));
     double *FU  = calloc(size+1,sizeof(double));
     double *FV  = calloc(size+1,sizeof(double));
 
-    //doing compuations
+    // Computation of the simulation
     tsunamiWriteFile(baseResultName,0,U,V,E,nElem,3);
     for (i = 1; i < nmax; i++)
     {   
@@ -385,17 +354,6 @@ void tsunamiCompute(double dt, int nmax, int sub, const char *meshFileName, cons
             tsunamiWriteFile(baseResultName,i,U,V,E,nElem,3);
         }
     }
-    
-    /*
-    for (i = 0; i < nEdg; i++)
-    {
-        for (j = 0; j < nEdg; j++)
-        {
-            printf("%f\n", phi1[i][j]);
-        }
-        
-    }
-    */
 
     free(bath);
     free(E);
